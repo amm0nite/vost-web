@@ -47,6 +47,18 @@
           {{ content }}
         {% endif %}
 
+        if {% site.show_shows %}
+        <div id="shows">
+            <div id="template" class="show">
+              <img class="thumb" />
+              <div class="text">
+                  <p class="title">(title)</p>
+                  <p class="time">(time)</p>
+              </div>
+            </div>
+        </div>
+        {% endif %}
+
       </section>
 
     </div>
