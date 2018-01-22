@@ -1,8 +1,8 @@
 <style>
     #template {
         display: hidden;
+        clear: both;
     }
-
     .thumb {
         float: left;
         width: 128px;
@@ -45,6 +45,7 @@
     function paint(show) {
         let showBlock = $('#template').clone();
         $('#shows').append(showBlock);
+        showBlock.attr('id', '');
         showBlock.find('.thumb').attr('src', show.thumb);
         showBlock.find('.title').html(show.title);
         let date = new Date(show.date);
