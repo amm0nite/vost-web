@@ -15,7 +15,6 @@
             shows.sort((a, b) => {
                 return (new Date(a.date)) - (new Date(b.date));
             });
-            reset();
             shows.forEach((show) => {
                 paint(show);
             });
