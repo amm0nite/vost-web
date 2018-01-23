@@ -1,0 +1,29 @@
+body {
+    padding-top:20px;
+}
+#dayTemplate {
+    display: none;
+}
+#showTemplate {
+    display: none;
+}
+.day {
+    clear: both;
+    text-transform: capitalize;
+}
+.show {
+    clear: both;
+    margin: 20px;
+    padding: 10px;
+}
+.thumb {
+    float: left;
+    width: 128px;
+}
+.text {
+    padding: 20px;
+    margin-left: 130px;
+}
+.time {
+    font-size: 26px;
+}
