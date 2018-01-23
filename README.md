@@ -1,5 +1,3 @@
 ## VOST Gaumont Labège
 
-test
-
-test
+La liste des prochaines séances en version originale sous titrée.
