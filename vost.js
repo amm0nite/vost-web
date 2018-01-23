@@ -1,10 +1,24 @@
 
-function fetch() {
+function fetchFromAPI(next) {
     let url = 'https://api.github.com/gists/4ff8222a078d9db0096195a46ef2a783';
 
     $.getJSON(url, (gist) => {
         let shows = JSON.parse(gist.files['vost.json'].content);
+        return next(null, shows);
+    });
+}
 
+function fetchRaw(next) {
+    let url = 'https://gist.githubusercontent.com/amm0nite/4ff8222a078d9db0096195a46ef2a783/raw/vost.json';
+
+    $.get(url, (raw) => {
+        let shows = JSON.parse(raw);
+        return next(null, shows);
+    });
+}
+
+function main() {
+    fetchRaw((err, shows) => {
         shows.sort((a, b) => {
             return (new Date(a.date)) - (new Date(b.date));
         });
@@ -58,4 +72,4 @@ function paintShow(show) {
     showBlock.show();
 }
 
-fetch();
+main();
